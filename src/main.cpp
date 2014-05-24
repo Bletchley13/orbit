@@ -3,10 +3,8 @@
 void main()
 {
 	Terminal::initialize();
-	char str[2];
-	str[1] = '\0';
-	for (int i = 0; i < 27; ++i) {
-		str[0] = i + 65;
-		Terminal::puts(str);
-	}
+	Terminal::set_color(Terminal::COLOR_LIGHT_GREEN, Terminal::COLOR_BLACK);
+	Terminal::puts("Lime!");
+	Terminal::set_color(Terminal::COLOR_LIGHT_RED, Terminal::COLOR_BLACK);
+	Terminal::puts("Red!");
 }

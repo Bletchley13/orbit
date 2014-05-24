@@ -19,7 +19,8 @@ void *memset(void *ptr, int val, size_t num)
 	uint8_t *point = (uint8_t *)ptr;
 	uint8_t v = (uint8_t) val;
 
-	for (size_t offset = 0; offset < num; ++offset) {
+	for (size_t offset = 0; offset < num; ++offset)
+	{
 		point[offset] = v;
 	}
 
