@@ -2,15 +2,14 @@
 #define _KERNEL_TERMINAL_HPP
 #include "std.hpp"
 
-namespace Terminal
-{
+namespace Terminal {
 	extern uint16_t *buffer;
 	const size_t WIDTH = 80, HEIGHT = 25;
 	extern size_t cx, cy;
 	extern uint8_t ccolor;
+	extern bool cursor_move;
 
-	enum Colors
-	{
+	enum Colors {
 		COLOR_BLACK = 0,
 		COLOR_BLUE = 1,
 		COLOR_GREEN = 2,
@@ -35,5 +34,6 @@ namespace Terminal
 	void scroll();
 	void set_color(enum Colors foreground, enum Colors background);
 	void clear();
+	void cursor_update();
 }
 #endif

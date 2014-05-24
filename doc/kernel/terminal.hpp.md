@@ -13,8 +13,14 @@ Functions for managing the terminal.
 | `Terminal::scroll()` | Scrolls the terminal up one line. |
 | `Terminal::set_color(enum Colors foreground, enum Colors background)` | Sets the terminal color to `foreground` `background`. |
 | `Terminal::clear()` | Clears the terminal and resets the cursor position. |
+| `Terminal::cursor_update()` | Moves the cursor to the current position, if `move_cursor` is true. |
 
-### Enums (optional)
-| Enum Name | Description |
+### Variables
+| Variable Name | Usage/Description |
+| --- | --- |
+| `Terminal::cursor_move` | If `true`, the VGA cursor will move after writing to the terminal. If `false`, the cursor will not move. |
+
+### Enums
+| Enum Name | Usage/Description |
 | --- | --- |
 | `Color` | Colors for use in the terminal. |
