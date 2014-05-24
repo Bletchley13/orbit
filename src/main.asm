@@ -25,8 +25,4 @@ _start:
 
 	cli
 	hang:
-	hlt
 	jmp hang
-
-test:
-	int 1
