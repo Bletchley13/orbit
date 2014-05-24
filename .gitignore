@@ -19,3 +19,9 @@
 *.exe
 *.out
 *.app
+
+# Project specific files
+*.bin
+*.iso
+*.cppo
+*.asmo
