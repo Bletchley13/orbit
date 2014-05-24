@@ -3,7 +3,6 @@
 void main()
 {
 	Terminal::initialize();
-	Terminal::putchar('a');
-	Terminal::putchar('\n');
-	Terminal::putchar('b');
+	Terminal::puts("Hello, world!");
+	Terminal::puts("This is on a new line.");
 }

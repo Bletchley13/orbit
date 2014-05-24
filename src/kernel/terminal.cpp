@@ -31,9 +31,22 @@ namespace Terminal
 			{
 				cx = cy = 0;
 				// scroll
-			} else {
+			}
+			else
+			{
 				cx = 0;
 			}
 		}
+	}
+
+	void puts(const char *str)
+	{
+		char chr = '\0';
+		size_t idx = 0;
+		while ((chr = str[idx++]) != '\0')
+		{
+			putchar(chr);
+		}
+		putchar('\n');
 	}
 }
