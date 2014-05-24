@@ -3,6 +3,10 @@
 void main()
 {
 	Terminal::initialize();
-	Terminal::puts("Hello, world!");
-	Terminal::puts("This is on a new line.");
+	char str[2];
+	str[1] = '\0';
+	for (int i = 0; i < 27; ++i) {
+		str[0] = i + 65;
+		Terminal::puts(str);
+	}
 }

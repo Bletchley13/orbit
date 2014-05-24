@@ -1,4 +1,4 @@
-SRC_DIRS := src/ src/kernel/
+SRC_DIRS := src/ src/kernel/ src/cstd/
 
 # Find all files in the SRC_DIRS directories suffixed by .cpp
 CXX_SRC := $(foreach dir, $(SRC_DIRS), $(wildcard $(dir)*.cpp))

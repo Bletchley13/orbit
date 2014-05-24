@@ -1,5 +1,6 @@
 #include "terminal.hpp"
 #include "std.hpp"
+#include "cstd/string.hpp"
 
 namespace Terminal
 {
@@ -29,8 +30,9 @@ namespace Terminal
 		{
 			if (++cy >= HEIGHT)
 			{
-				cx = cy = 0;
-				// scroll
+				cx = 0;
+				cy = HEIGHT - 1;
+				scroll();
 			}
 			else
 			{
@@ -48,5 +50,11 @@ namespace Terminal
 			putchar(chr);
 		}
 		putchar('\n');
+	}
+
+	void scroll()
+	{
+		memcpy(buffer, buffer + WIDTH, WIDTH * (HEIGHT - 1) * sizeof(uint16_t));
+		memset(buffer + WIDTH * (HEIGHT - 1), 0, WIDTH * sizeof(uint16_t));
 	}
 }

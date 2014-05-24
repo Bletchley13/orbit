@@ -11,5 +11,6 @@ namespace Terminal
 	void initialize();
 	void putchar(char chr);
 	void puts(const char *str);
+	void scroll();
 }
 #endif
