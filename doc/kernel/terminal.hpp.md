@@ -11,6 +11,8 @@ Functions for managing the terminal.
 | `Terminal::putchar(char chr)` | Places the character `chr` at the current cursor position. |
 | `Terminal::puts(const char *str)` | Writes the string `str` at the current cursor position, and prints a newline (`\n`). |
 | `Terminal::scroll()` | Scrolls the terminal up one line. |
+| `Terminal::set_color(enum Colors foreground, enum Colors background)` | Sets the terminal color to `foreground` `background`. |
+| `Terminal::clear()` | Clears the terminal and resets the cursor position. |
 
 ### Enums (optional)
 | Enum Name | Description |
