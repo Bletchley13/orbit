@@ -9,11 +9,11 @@ CXX_OBJ := $(foreach file, $(CXX_SRC), $(file)o)
 ASM_SRC := $(foreach dir, $(SRC_DIRS), $(wildcard $(dir)*.asm))
 ASM_OBJ := $(foreach file, $(ASM_SRC), $(file)o)
 
-INCLUDE_DIRS := 
+INCLUDE_DIRS := src/
 
 # Assembler
 AS := nasm
-AS_FLAGS = -felf
+AS_FLAGS := -felf
 
 CXX := /home/campbell/opt/cross/bin/i586-elf-g++
 CXX_FLAGS := $(foreach dir, $(INCLUDE_DIRS), -I$(dir)) -ffreestanding -O2 -Wall -Wextra -fno-exceptions -fno-rtti -std=c++11

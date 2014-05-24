@@ -3,5 +3,7 @@
 void main()
 {
 	Terminal::initialize();
-	Terminal::test();
+	Terminal::putchar('a');
+	Terminal::putchar('\n');
+	Terminal::putchar('b');
 }
